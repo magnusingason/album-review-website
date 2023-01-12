@@ -1,0 +1,67 @@
+.upper_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+    border-bottom: solid grey;
+    border-width: 1px;
+    padding-bottom: 30px;
+}
+
+.box1{
+    padding: 50px;
+    font-family: Georgia, serif;
+    display: flex;
+    flex-direction: column;
+    margin-right: 40%;
+    height: 15%
+}
+
+.title{
+    font-size: 80px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    border-bottom: solid black;
+}
+
+.artist{
+    font-size: 40px;
+    font-weight: bold;
+    max-height: 10px;
+}
+
+.box{
+    margin: 30px;
+    display: flex;
+    margin-right: 60px;
+    height: fit-content
+}
+
+.box img{
+    width: 70%;
+    margin: 30px;
+}
+
+.box .rating{
+    margin-top: 25%;
+    font-size: 60px;
+    border: solid black;
+    margin-bottom: 20%;
+    padding: 10px;
+    height: fit-content;
+
+}
+
+.text_above_summary{
+    font-size: 50px;
+    margin: 40px;
+    color: grey;
+    opacity: 0.6;
+    font-family: Georgia, serif;
+}
+
+.review{
+    margin: 50px;
+    font-family: Georgia, serif;
+    font-size: 20px;
+}
