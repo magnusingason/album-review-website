@@ -7,7 +7,7 @@ import { getAlbums } from '@lib/album'
 import { useRouter } from 'next/router'
 import Navbar from '@components/Navbar';
 
-export const getServerSideProps: GetServerSideProps<{ data: Data }> = async (context) => {
+export const getServerSideProps: GetServerSideProps<{  }> = async (context) => {
   const res = await fetch('http://localhost:3000/api/albums');
   const data = await res.json();
 
