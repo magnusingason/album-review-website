@@ -1,4 +1,4 @@
-import {getQuery} from '@lib/album.ts'
+import {getQuery} from '@lib/album.js'
 
 
 async function handler(req,res){

@@ -1,4 +1,4 @@
-import {postAlbums} from '@lib/album.ts'
+import {postAlbums} from '@lib/album.js'
 
 async function handler(req,res){
     if (req.method == 'POST'){

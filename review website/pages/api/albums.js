@@ -1,4 +1,4 @@
-import {getAlbums} from '@lib/album.ts'
+import {getAlbums} from '@lib/album.js'
 
 async function handler(req,res){
     if (req.method == 'GET'){
