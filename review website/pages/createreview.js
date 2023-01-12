@@ -24,6 +24,26 @@ function CreateReview() {
 
     console.log(summary)
 
+    let res
+  if(process.env.NODE_ENV == 'development'){
+    fetch('http://localhost:3000/api/addalbum', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(obj),
+    })
+  }
+  if(process.env.NODE_ENV == 'production'){
+    fetch('https://album-review-website.herokuapp.com/api/addalbum', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(obj),
+    })
+  }
+
     fetch('http://localhost:3000/api/addalbum', {
       method: 'POST',
       headers: {

@@ -6,8 +6,15 @@ import styles from '../styles/review_id.module.css'
 export async function getServerSideProps(context) {
 
     const { id } = context.query;
+
+    let res
+    if(process.env.NODE_ENV == 'development'){
+        res = await fetch(`http://localhost:3000/api/${id}`);
+    }
+    if(process.env.NODE_ENV == 'production'){
+        res = await fetch(`https://album-review-website.herokuapp.com/api/${id}`);
+    }
     
-    const res = await fetch(`http://localhost:3000/api/${id}`);
     const data = await res.json();
     return {
       props: {
