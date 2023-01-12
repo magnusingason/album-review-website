@@ -9,10 +9,6 @@ type Props = {
 
 const Navbar: React.FC<Props> = ({ name }) => {
 
-  const handleSearch = (query) => {
-    // Perform the search and display the results
-  };
-
   return (
     <div className={styles.NavBar}>
       <Link legacyBehavior href="/">
