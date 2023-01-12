@@ -4,10 +4,9 @@ import SearchBar from './SearchBar'
 import styles from '../styles/navbar.module.css'
 
 type Props = {
-  name: string
 }
 
-const Navbar: React.FC<Props> = ({ name }) => {
+const Navbar: React.FC<Props> = ({}) => {
 
 
   return (

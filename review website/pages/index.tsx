@@ -7,7 +7,9 @@ import { getAlbums } from '@lib/album'
 import { useRouter } from 'next/router'
 import Navbar from '@components/Navbar';
 
-export const getServerSideProps: GetServerSideProps<{  }> = async (context) => {
+let data: any = {};
+
+export const getServerSideProps: GetServerSideProps<{ data }> = async (context) => {
   const res = await fetch('http://localhost:3000/api/albums');
   const data = await res.json();
 
@@ -17,6 +19,7 @@ export const getServerSideProps: GetServerSideProps<{  }> = async (context) => {
     },
   };
 };
+
 
 export default function Home({ data }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   let albums = data.albums
