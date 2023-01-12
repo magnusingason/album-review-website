@@ -8,7 +8,6 @@ import { useRouter } from 'next/router'
 import Navbar from '@components/Navbar';
 
 export const getServerSideProps: GetServerSideProps<{ data }> = async (context) => {
-  console.log(process.env.NODE_ENV)
   let res
   if(process.env.NODE_ENV == 'development'){
     res = await fetch('http://localhost:3000/api/albums');
