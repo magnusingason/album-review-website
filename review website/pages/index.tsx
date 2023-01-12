@@ -6,7 +6,7 @@ import { InferGetServerSidePropsType } from 'next'
 import { getAlbums } from '@lib/album'
 import { useRouter } from 'next/router'
 import Navbar from '@components/Navbar';
-import Footer from '@components/footer';
+import Footer from '@components/Footer';
 
 export const getServerSideProps: GetServerSideProps<{ data }> = async (context) => {
   let res
