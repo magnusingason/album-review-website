@@ -8,6 +8,11 @@ import { useRouter } from 'next/router'
 import Navbar from '@components/Navbar';
 
 export const getServerSideProps: GetServerSideProps<{ data }> = async (context) => {
+  if(process.env.NODE_ENV === 'development'){
+    const res = await fetch('http://localhost:3000/api/albums');
+  }else{
+    const res = await fetch('https://album-review-website.herokuapp.com/api/albums');
+  }
   const res = await fetch('http://localhost:3000/api/albums');
   const data = await res.json();
 
