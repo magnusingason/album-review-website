@@ -11,7 +11,8 @@ export const getServerSideProps: GetServerSideProps<{ data }> = async (context) 
   console.log(process.env.NODE_ENV)
   if(process.env.NODE_ENV == 'development'){
     const res = await fetch('http://localhost:3000/api/albums');
-  }else(process.env.NODE_ENV == 'production'){
+  }
+  if(process.env.NODE_ENV == 'production'){
     const res = await fetch('https://album-review-website.herokuapp.com/api/albums');
   }
   const res = await fetch('http://localhost:3000/api/albums');
