@@ -6,6 +6,7 @@ import { InferGetServerSidePropsType } from 'next'
 import { getAlbums } from '@lib/album'
 import { useRouter } from 'next/router'
 import Navbar from '@components/Navbar';
+import Footer from '@components/footer';
 
 export const getServerSideProps: GetServerSideProps<{ data }> = async (context) => {
   let res
@@ -53,6 +54,7 @@ export default function Home({ data }: InferGetServerSidePropsType<typeof getSer
         </div>
     ))}
     </div>
+    <Footer />
     </div>
   )
 }
