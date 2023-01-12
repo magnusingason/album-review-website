@@ -25,6 +25,7 @@ export const getServerSideProps: GetServerSideProps<{ data }> = async (context) 
 
 export default function Home({ data }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   let albums = data.albums
+  console.log(process.env.NODE_ENV)
   const router = useRouter()
   return (
     <div>
