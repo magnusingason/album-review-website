@@ -2,58 +2,85 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 30px;
+    margin-right: 6%;
     border-bottom: solid grey;
     border-width: 1px;
-    padding-bottom: 30px;
+    padding-bottom: 5%;
+    width: 100%;
 }
 
 .box1{
-    padding: 50px;
+    padding: 6%;
     font-family: Georgia, serif;
     display: flex;
     flex-direction: column;
-    margin-right: 40%;
-    height: 15%
+    height: 15%;
+    margin-right: 10%;
 }
 
 .title{
-    font-size: 80px;
+    font-size: max(4.5vw,30px);
     font-weight: bold;
     margin-bottom: 30px;
     border-bottom: solid black;
 }
 
+
 .artist{
-    font-size: 40px;
+    font-size: max(3.0vw,20px);
     font-weight: bold;
-    max-height: 10px;
+    max-height: 5%;
 }
 
+
 .box{
-    margin: 30px;
     display: flex;
-    margin-right: 60px;
+    margin-right: 20%;
     height: fit-content
 }
 
-.box img{
-    width: 70%;
-    margin: 30px;
+.box img {
+    width:350px;
+    height:auto;
 }
 
-.box .rating{
+@media screen and (max-width: 1024px) {
+    /* Styles go here */
+    .box img {
+        width:250px;
+        height:auto;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .box img {
+        width:150px;
+        height:auto;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .box img {
+        width:50px;
+        height:auto;
+    }
+}
+
+
+.rating{
     margin-top: 25%;
-    font-size: 60px;
+    font-size: max(3.5vw,25px);
     border: solid black;
     margin-bottom: 20%;
-    padding: 10px;
+    padding: 5%;
     height: fit-content;
+    margin-left: 20%;
+    margin-right: 30%;
 
 }
 
 .text_above_summary{
-    font-size: 50px;
+    font-size: max(3.5vw,15px);
     margin: 40px;
     color: grey;
     opacity: 0.6;
