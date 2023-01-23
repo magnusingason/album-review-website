@@ -4,6 +4,7 @@
     background-color: rgba(183, 0, 255, 0.342);
     justify-content: center;
     align-content: space-evenly;
+    min-width: 500px;
 
 }
 
