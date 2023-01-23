@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit,
     minmax(400px,1fr));
-    padding: 40px;
+    padding: 4%;
     grid-gap: 40px;
 }
 
@@ -10,7 +10,7 @@
 .card_image{
     width: 100%;
     display: block;
-    height: 400px;
+    height: 75%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
@@ -21,8 +21,13 @@
     box-shadow: 0 0 30px rgba(0,0,0,0.18);
     transition: 0.5s;
     height: 550px;
-    width: 100%;
-    max-width: 400px;
+    width: 400px;
+}
+
+@media only screen and (max-width: 400px){
+    .album_card{
+        width: 250px;
+    }
 }
 
 .album_card:hover{
@@ -38,7 +43,7 @@
     font-family: Georgia, serif;
     font-style: italic;
     font-size: calc(10px + (10 - 4) * ((100vw - 200px) / (1600 - 200)));-size: small;
-    max-width: 70%;
+    max-width: 40%;
     max-height: 150px;
     flex:2;
 }
