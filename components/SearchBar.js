@@ -31,7 +31,7 @@ const SearchBar = () => {
     <div className={styles.search_container}>
       <form onSubmit={handleSubmit} className={styles.search_bar}>
         <input type="text" value={query} placeholder="input search here" onChange={handleChange} className={styles.search_input} />
-        <button className={styles.search_button} type="submit"> <img src="https://www.freepnglogos.com/uploads/search-png/search-icon-transparent-images-vector-15.png" alt="me" width="20" height="25" /></button>
+        <button className={styles.search_button} type="submit"> <img src="https://www.freepnglogos.com/uploads/search-png/search-icon-transparent-images-vector-15.png" alt="me" /></button>
       </form>
     </div>
   );
