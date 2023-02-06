@@ -1,0 +1,90 @@
+.whole_wrapper{
+    min-height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+    min-width: 500px;
+    
+}
+
+.create_form{
+    width: 85%;
+    padding: 10%;
+    background-color: aliceblue;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20%;
+}
+.wrapper{
+    background-color: aliceblue;
+    width: 100%;
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    gap: 10%;
+    margin-bottom: 5%;
+}
+.wrapper .box{
+    position: relative;
+    width: 100%;
+    padding: 3%;
+    margin: 2%;
+
+}
+.wrapper .box input{
+    width: 100%;
+    font-size: 2.0vw;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    margin-top: 10px;
+    border-radius: 2px;
+
+    transition: 0.5s linear;
+}
+
+.wrapper .box input:focus,
+.wrapper .box input:valid{
+    background-color: aqua;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.create_summary label{
+    font-size: 18px;
+    font-size: bold;
+    padding: 20px;
+}
+.create_form button{ 
+    background-color: aqua;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 30px 2px;
+}
+.title{
+    margin-bottom: 5%;
+    font-size: 2.5vw;
+}
+
+.infotext{
+    font-size: 1.2vw;
+    margin-bottom: 4%;
+}
+
+.takentext{
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.0vw;
+}
+.createacclink a{
+    color: black;
+}

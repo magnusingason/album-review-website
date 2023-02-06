@@ -39,7 +39,7 @@
 
 .wrapper .box input{
     width: 100%;
-    font-size: 2.0vw;
+    font-size: 1.4vw;
     background: transparent;
     border: none;
     outline: none;
@@ -52,18 +52,17 @@
 
 .wrapper .box input:focus,
 .wrapper .box input:valid{
-    padding: 20px 10px;
+    padding: 1%;
     background-color: aqua;
     margin-top: 15px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    font-size: 1.4vw;
 }
 
 .wrapper .box label{
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 18px;
+    font-size: 1.4vw;
     font-size: bold;
     padding: 20px;
 }
@@ -79,7 +78,7 @@
 
 .create_summary textarea{
     width: 100%;
-    font-size: 20px;
+    font-size: 1.3vw;
     background: transparent;
     border: none;
     outline: none;
@@ -95,7 +94,7 @@
 }
 
 .create_summary label{
-    font-size: 18px;
+    font-size: 1.6vw;
     font-size: bold;
     padding: 20px;
 }
@@ -109,4 +108,8 @@
   display: inline-block;
   font-size: 16px;
   margin: 30px 2px;
+}
+.flagger{
+    color:red;
+    font-size: 1vw;
 }

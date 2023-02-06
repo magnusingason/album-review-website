@@ -6,12 +6,22 @@
     "start": "next start"
   },
   "dependencies": {
+    "@auth0/nextjs-auth0": "^2.2.1",
+    "@types/body-parser": "^1.19.2",
+    "auth0": "^3.1.2",
+    "bcrypt": "^5.1.0",
+    "crypto-js": "^4.1.1",
+    "cryptojs": "^2.5.3",
+    "cryptr": "^6.1.0",
+    "formik": "^2.2.9",
     "mongodb": "^4.8.1",
     "next": "latest",
+    "next-auth": "^4.19.2",
     "node-fetch": "^3.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-jss": "^10.9.2",
+    "stores": "^1.0.0",
     "styled": "^1.0.0"
   },
   "devDependencies": {

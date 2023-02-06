@@ -1,4 +1,5 @@
 import Navbar from '@components/Navbar'
+import Link from 'next/link';
 import { useRouter } from 'next/router'
 import styles from '../styles/review_id.module.css'
 
@@ -26,6 +27,7 @@ export async function getServerSideProps(context) {
 function ReviewPage({data}) {
 
     data = data.album
+    const href = `/users/${data.user}`
 
     return( 
         <div>
@@ -43,7 +45,11 @@ function ReviewPage({data}) {
                         {data.rating}
                     </div>
                 </div>
+                
 
+            </div>
+            <div className={styles.user}>
+                <b>Review written by:</b>  <Link legacyBehavior href={href}><a> {data.user} </a></Link>
             </div>
             <div>
             <div className={styles.text_above_summary}> Here is what the reviewer had to say about the Album....</div>

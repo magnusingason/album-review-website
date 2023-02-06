@@ -67,9 +67,9 @@
     text-decoration: none;
     color: black;
     font-family: Georgia, serif;
-    margin-left: 8%;
     transition: 1s;
     padding: 1%;
+    margin-left: 1%;
     border-radius: 30px;
     text-align: center;
 }

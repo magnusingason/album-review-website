@@ -42,7 +42,7 @@
 
 .box img {
     width:350px;
-    height:auto;
+    height:350px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -92,4 +92,10 @@
     margin: 50px;
     font-family: Georgia, serif;
     font-size: 20px;
+}
+
+.user{
+    font-size: 1.2vw;
+    margin: 1%;
+    font-family: Georgia, serif;
 }

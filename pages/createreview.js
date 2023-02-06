@@ -2,8 +2,12 @@ import Navbar from '@components/Navbar';
 import React, { useState } from 'react';
 import styles from '../styles/createreview.module.css'
 import { useRouter } from 'next/router';
+import {useUser} from '@auth0/nextjs-auth0/client'
 
 function CreateReview() {
+
+  const {user, error, isLoading} = useUser()
+
   const [title, setTitle] = useState('');
   const [artist, setArtist] = useState('');
   const [rating, setRating] = useState('');
@@ -13,18 +17,20 @@ function CreateReview() {
 
   const handleSubmit = event => {
     event.preventDefault();
+    if(user){
     let data = {
       "title": title,
       "Artist": artist,
       "rating": rating,
       "summary": summary,
-      "picture": picture
+      "picture": picture,
+      "user": user.nickname
     }
     const obj = JSON.parse(JSON.stringify(data));
 
-    console.log(summary)
 
     let res
+
   if(process.env.NODE_ENV == 'development'){
     fetch('http://localhost:3000/api/addalbum', {
       method: 'POST',
@@ -43,17 +49,12 @@ function CreateReview() {
       body: JSON.stringify(obj),
     })
   }
-
-    fetch('http://localhost:3000/api/addalbum', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(obj),
-    })
   
     router.push('/')
-    
+}else{
+  alert("You need to log in before you create a review.")
+}
+
   };
 
   return (
@@ -62,6 +63,7 @@ function CreateReview() {
     <div className={styles.whole_wrapper}>
     <div className={styles.create_container}>
     <form onSubmit={handleSubmit} className={styles.create_form}>
+    {user ? <div></div> : <div className={styles.flagger}>Need to be logged in to create review </div>}
       <div className={styles.wrapper}>
         <div className={styles.box}>
           <label>

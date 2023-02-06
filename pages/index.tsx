@@ -8,6 +8,8 @@ import { useRouter } from 'next/router'
 import Navbar from '@components/Navbar';
 import Footer from '@components/Footer';
 
+
+
 export const getServerSideProps: GetServerSideProps<{ data }> = async (context) => {
   let res
   if(process.env.NODE_ENV == 'development'){
