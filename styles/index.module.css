@@ -125,7 +125,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.6vw;
+    font-size: max(15px,1.6vw);
     font-weight: bold;
     border: solid;
     border-color: white;
