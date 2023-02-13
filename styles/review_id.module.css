@@ -95,7 +95,7 @@
 }
 
 .user{
-    font-size: 1.2vw;
+    font-size: max(1.2vw, 12px);
     margin: 1%;
     font-family: Georgia, serif;
 }
