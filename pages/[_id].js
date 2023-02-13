@@ -2,6 +2,7 @@ import Navbar from '@components/Navbar'
 import Link from 'next/link';
 import { useRouter } from 'next/router'
 import styles from '../styles/review_id.module.css'
+import Head from 'next/head'
 
 
 export async function getServerSideProps(context) {
@@ -31,6 +32,9 @@ function ReviewPage({data}) {
 
     return( 
         <div>
+                  <Head>
+                    <title>Review Page</title>
+                </Head>
             <Navbar />
             <div className={styles.upper_wrapper}>
                 <div className={styles.box1}>

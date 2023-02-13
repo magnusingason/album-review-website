@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import styles from '../styles/createreview.module.css'
 import { useRouter } from 'next/router';
 import {useUser} from '@auth0/nextjs-auth0/client'
+import Head from 'next/head'
 
 function CreateReview() {
 
@@ -58,7 +59,10 @@ function CreateReview() {
   };
 
   return (
-    <div>
+    <div>      
+      <Head>
+        <title>Create Review</title>
+      </Head>
     <Navbar />
     <div className={styles.whole_wrapper}>
     <div className={styles.create_container}>

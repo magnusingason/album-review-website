@@ -20,14 +20,20 @@ const Navbar: React.FC<Props> = ({}) => {
       <a className={styles.name}>Album Review Website</a>
       </Link>
       <SearchBar />
-      <Link legacyBehavior href="/createreview">
-        <a className={styles.createlink}>Click to create review </a>
-      </Link>
-      {user ? <Link legacyBehavior href="/api/auth/logout">
-          <a className={styles.createlink}>Log out</a>
-      </Link>: <Link legacyBehavior href="/api/auth/login">
-          <a className={styles.createlink}>Log in</a>
-      </Link>}
+      <ul className={styles.list}>
+        <li>
+          <Link legacyBehavior href="/createreview">
+            <a className={styles.createlink}>create review </a>
+          </Link>
+        </li>
+        <li>
+            {user ? <Link legacyBehavior href="/api/auth/logout">
+              <a className={styles.createlink}>Log out</a>
+          </Link>: <Link legacyBehavior href="/api/auth/login">
+              <a className={styles.createlink}>Log in</a>
+          </Link>}
+        </li>
+      </ul>
     </div>
   )
 }
