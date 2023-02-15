@@ -30,23 +30,15 @@
     border: solid;
     border-color: black
 }
-.wrapper .box input{
-    width: 100%;
+ .box input{
+    width: 12%;
+    padding-left: 3%;
     font-size: 1.4vw;
     background: transparent;
     border: none;
     outline: none;
     border-bottom: 1px solid black;
-    margin-top: 10px;
     border-radius: 2px;
-
-    transition: 0.5s linear;
-}
-.wrapper .box{
-    position: relative;
-    width: 100%;
-    padding: 3%;
-    margin: 2%;
 }
 .create_summary{
     display: flex;

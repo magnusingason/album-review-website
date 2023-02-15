@@ -92,6 +92,7 @@ function CreateReview({props}) {
               Rating (1-10):
               <input
                 type="text"
+                className={styles.review_rating_input}
                 value={rating}
                 onChange={event => setRating(event.target.value)}
                 required

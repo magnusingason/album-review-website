@@ -37,17 +37,17 @@
 
 }
 
-.wrapper .box input{
+.review_rating_input{
+    font-family: inherit;
     width: 100%;
-    font-size: 1.4vw;
+    border: 0;
+    border-bottom: 2px solid $gray;
+    outline: 0;
+    font-size: 1.3rem;
+    color: $white;
+    padding: 7px 0;
     background: transparent;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid black;
-    margin-top: 10px;
-    border-radius: 2px;
-
-    transition: 0.5s linear;
+    transition: border-color 0.2s;
 }
 
 .wrapper .box input:focus,
