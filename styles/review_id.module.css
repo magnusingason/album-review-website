@@ -9,7 +9,71 @@
     width: 100%;
     min-width: 500px;
 }
+.create_form{
+    width: 85%;
+    padding: 4%;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.create_summary textarea{
+    width: 100%;
+    font-size: 1.3vw;
+    background: transparent;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+    border-radius: 2px;
+    min-height: 300px;
+    border: solid;
+    border-color: black
+}
+.wrapper .box input{
+    width: 100%;
+    font-size: 1.4vw;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    margin-top: 10px;
+    border-radius: 2px;
 
+    transition: 0.5s linear;
+}
+.wrapper .box{
+    position: relative;
+    width: 100%;
+    padding: 3%;
+    margin: 2%;
+}
+.create_summary{
+    display: flex;
+    flex-direction: column;
+}
+.create_summary label{
+    font-size: 1.6vw;
+    font-size: bold;
+    padding: 20px;
+}
+.create_summary textarea:focus{
+    box-shadow: 0 0 0 2px black;
+}
+.create_form button{ 
+    background-color: aqua;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 30px 2px;
+  }
+.flagger{
+    color:red;
+    font-size: 1vw;
+}
 .box1{
     padding: 6%;
     font-family: Georgia, serif;

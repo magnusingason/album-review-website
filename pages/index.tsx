@@ -1,13 +1,14 @@
 import fetch from 'node-fetch';
 import styles from '../styles/index.module.css'
 import { GetServerSideProps } from 'next'
-import Image from 'next/image'
 import { InferGetServerSidePropsType } from 'next'
-import { getAlbums } from '@lib/album'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import Navbar from '@components/Navbar';
+import { useState, useEffect } from 'react';
 import Footer from '@components/Footer';
+import WorldChart from '@components/WorldChart';
+import classNames from "classnames";
 
 
 
@@ -21,9 +22,11 @@ export const getServerSideProps: GetServerSideProps<{ data }> = async (context) 
   }
   const data = await res.json();
 
+
+
   return {
     props: {
-      data,
+      data
     },
   };
 };
@@ -31,12 +34,39 @@ export const getServerSideProps: GetServerSideProps<{ data }> = async (context) 
 export default function Home({ data }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   let albums = data.albums
   const router = useRouter()
+  const handleRightClick = () => {
+    setClicked(true);
+  };
+
+  const handleLeftClick = () => {
+    setClicked(false);
+  };
+
+  const [clicked, setClicked] = useState<boolean>(false);
   return (
     <div>
       <Head>
-        <title>Album Review</title>
+        <title>Music Review</title>
       </Head>
       <Navbar />
+      <div className={styles.switch_container}>
+        <div className={classNames({[styles["left"]]: !clicked,
+                        [styles["not-left"]]: clicked})}
+        role="button"
+        tabIndex={0}
+        onClick={handleLeftClick} >
+          <a>Music to Review</a>
+        </div>
+        <div className={classNames({[styles["left"]]: clicked,
+                        [styles["not-left"]]: !clicked})}
+        role="button"
+        tabIndex={0}
+        onClick={handleRightClick}
+        >
+          <a>Music Already Reviewed</a>
+        </div>
+      </div>
+  {clicked ? 
    <div className={styles.container}>
       {albums.map((item) => (
         <div key={item._id}>
@@ -66,6 +96,7 @@ export default function Home({ data }: InferGetServerSidePropsType<typeof getSer
         </div>
     ))}
     </div>
+ : <WorldChart />}
     <Footer />
     </div>
   )

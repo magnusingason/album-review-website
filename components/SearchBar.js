@@ -11,27 +11,30 @@ const SearchBar = () => {
   const handleChange = (event) => {
     setQuery(event.target.value);
   };
-
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (!query){
+    console.log(router.pathname)
+    if (router.pathname == '/search/results'){
+      router.push({ pathname: router.pathname, query: { query: query } })
+      router.reload(window.location.pathname)
+    }
+      if (!query){
+        router.push({
+          pathname: `/search/results/`,
+          query: { query: '' }
+        })
+      }else{
       router.push({
-        pathname: `/search/${query}`,
-        query: { query: '' }
+        pathname: `/search/results/`,
+        query: { query: query }
       })
-    }else{
-    router.push({
-      pathname: `/search/${query}`,
-      query: { query: query }
-    })
+    }
   }
-  };
-
   return (
     <div className={styles.search_container}>
       <form onSubmit={handleSubmit} className={styles.search_bar}>
-        <input type="text" value={query} placeholder="input search here" onChange={handleChange} className={styles.search_input} required/>
-        <button className={styles.search_button} type="submit"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoLXiJy2u6hCWQj1ATAxP6pPSXa6W7fVRoHbZTn2ruPQ&s" alt="me" /></button>
+        <input type="text" value={query} placeholder="Search For Music To Review" onChange={handleChange} className={styles.search_input} required/>
+        <button className={styles.search_button} type="submit"> <img src="https://img.icons8.com/ios/256/search--v1.png" alt="me" /></button>
       </form>
     </div>
   );

@@ -42,6 +42,28 @@
     
 }
 
+.card_flex h2 {
+    width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+            line-clamp: 1; 
+    -webkit-box-orient: vertical;
+}
+.album_card:hover h2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+            line-clamp: 2; 
+    -webkit-box-orient: vertical;
+}
+
+.artist_name{
+    height: 50px;
+}
+
 .card_flex{
     position: absolute;
     bottom: -30%;
@@ -50,7 +72,7 @@
 	background-color: rgba(0,0,0,0.8);
     overflow: hidden;
     height: 42%;
-    padding-top: 1%;
+    padding-top: 0%;
     margin: 0;
     width: 100%;
 }
@@ -87,7 +109,6 @@
 
 .card_title{
     position: absolute;
-    font-family: 'Roboto', sans-serif;
     top: 6%;
     left: 3%;
     margin: 0px;
@@ -102,6 +123,15 @@
     -webkit-line-clamp: 2;
     overflow: hidden;
     height: 30%;
+    -webkit-box-orient: vertical;
+}
+
+.card_flex h3{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+            line-clamp: 1; 
     -webkit-box-orient: vertical;
 }
 
@@ -121,51 +151,13 @@
     color: black;
 }
 
-.card_rating{
-    flex:1;
-    margin: 3%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: max(15px,1.6vw);
-    font-weight: bold;
-    border: solid;
-    border-color: white;
-    width: 70px;
-}
-.upper_wrapper{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 6%;
-    border-bottom: solid grey;
-    border-width: 1px;
-    width: 100%;
-    min-width: 500px;
-}
-.box1{
-    padding: 2%;
-    font-family: Georgia, serif;
-    display: flex;
-    flex-direction: column;
-
-}
-.title{
-    font-size: max(4.5vw,30px);
-    font-weight: bold;
-    margin-bottom: 30px;
-    color:dark grey;
-}
-.text_above_summary{
-    font-size: max(2vw,15px);
-    color: grey;
-    opacity: 0.6;
-    font-family: Georgia, serif;
-}
 
 .button_rating_box{
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: row;
+    margin-right: 1%;
     gap: 40%;
 }
 .button_rating_box button{
@@ -177,26 +169,13 @@
     display: inline-block;
     font-size: max(0.6vw,15px);
     cursor: pointer;
-    margin-top: 7%;
-    padding: 3% 20%;
+    padding: 3% 10%;
     white-space: nowrap;
 }
 
-.switch_container{
+.world_title{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30%;
-    margin: 1%;
-    cursor: pointer;
+    font-size: max(1.6vw, 15px);
 }
-
-.left {
-    font-size: max(1.2vw,12px);
-    border-bottom: solid black;
-}
-.not-left {
-    font-size: max(1.2vw,12px);
-}
-
-

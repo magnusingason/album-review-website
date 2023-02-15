@@ -12,19 +12,19 @@ type Props = {
 
 const Navbar: React.FC<Props> = ({}) => {
   const {user, error, isLoading} = useUser()
-
-
   return (
     <div className={styles.NavBar}>
       <Link legacyBehavior href="/">
-      <a className={styles.name}>Album Review Website</a>
+      <a className={styles.name}>Music Review Website</a>
       </Link>
       <SearchBar />
       <ul className={styles.list}>
         <li>
-          <Link legacyBehavior href="/createreview">
-            <a className={styles.createlink}>create review </a>
-          </Link>
+          {user ? <Link legacyBehavior href={`/users/${user.nickname}`}>
+            <a className={styles.createlink}>my reviews </a>
+          </Link>: <Link legacyBehavior href='/api/auth/login'>
+            <a className={styles.createlink}>my reviews </a>
+          </Link>}
         </li>
         <li>
             {user ? <Link legacyBehavior href="/api/auth/logout">
