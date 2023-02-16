@@ -15,8 +15,13 @@ const SearchBar = () => {
     event.preventDefault();
     console.log(router.pathname)
     if (router.pathname == '/search/results'){
-      router.push({ pathname: router.pathname, query: { query: query } })
-      router.reload(window.location.pathname)
+      router.replace({
+        pathname: router.pathname,
+        query: { query: query },
+      });
+      setTimeout(() => {
+        window.location.reload(); // reload the page after a short delay
+      }, 300);
     }
       if (!query){
         router.push({
